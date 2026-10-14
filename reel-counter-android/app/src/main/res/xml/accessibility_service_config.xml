@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Events are restricted to the four allowlisted packages (PRD §5.2, AC17). Only scroll and
+  window-state events are requested. NOT declared as an accessibility tool (PRD §0.3, §13).
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewScrolled|typeWindowStateChanged"
+    android:packageNames="com.instagram.android,com.google.android.youtube,com.facebook.katana,com.zhiliaoapp.musically,com.ss.android.ugc.trill"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault"
+    android:notificationTimeout="0"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="false"
+    android:isAccessibilityTool="false"
+    android:description="@string/a11y_service_description"
+    android:summary="@string/a11y_service_description" />

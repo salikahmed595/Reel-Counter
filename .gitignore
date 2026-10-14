@@ -1,0 +1,21 @@
+# Build outputs & IDE
+**/build/
+**/.gradle/
+**/.kotlin/
+**/.idea/
+*.iml
+**/local.properties
+.DS_Store
+Thumbs.db
+
+# Node
+**/node_modules/
+reel-counter-billing-backend/dist/
+
+# Secrets — never commit
+**/keystore.properties
+*.jks
+*.keystore
+.env
+**/service-account*.json
+*.json.key

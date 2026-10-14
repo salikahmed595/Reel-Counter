@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" width="1200" height="470" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="470" rx="28" fill="#10120F"/>
+  <text x="60" y="70" fill="#B9F464" font-size="15" font-weight="800" letter-spacing="3">HOW IT WORKS</text>
+  <text x="60" y="108" fill="#FFFFFF" font-size="30" font-weight="800">Swipe as usual. The count happens on your phone.</text>
+
+  <!-- step boxes -->
+  <g font-size="15">
+    <rect x="60" y="150" width="240" height="190" rx="20" fill="#1A1D18" stroke="#2A2F26"/>
+    <circle cx="96" cy="186" r="18" fill="#B9F464"/><text x="96" y="192" text-anchor="middle" font-weight="800" fill="#10120F" font-size="16">1</text>
+    <text x="80" y="240" fill="#FFFFFF" font-weight="800" font-size="19">You swipe</text>
+    <text x="80" y="268" fill="#A3A89C">to the next video in</text>
+    <text x="80" y="290" fill="#A3A89C">Reels, Shorts or TikTok</text>
+
+    <rect x="340" y="150" width="240" height="190" rx="20" fill="#1A1D18" stroke="#2A2F26"/>
+    <circle cx="376" cy="186" r="18" fill="#B9F464"/><text x="376" y="192" text-anchor="middle" font-weight="800" fill="#10120F" font-size="16">2</text>
+    <text x="360" y="240" fill="#FFFFFF" font-weight="800" font-size="19">Android notices</text>
+    <text x="360" y="268" fill="#A3A89C">the feed moved one page</text>
+    <text x="360" y="290" fill="#A3A89C">(position only — no content)</text>
+
+    <rect x="620" y="150" width="240" height="190" rx="20" fill="#1A1D18" stroke="#2A2F26"/>
+    <circle cx="656" cy="186" r="18" fill="#B9F464"/><text x="656" y="192" text-anchor="middle" font-weight="800" fill="#10120F" font-size="16">3</text>
+    <text x="640" y="240" fill="#FFFFFF" font-weight="800" font-size="19">PAICONS counts +1</text>
+    <text x="640" y="268" fill="#A3A89C">first video and bounces</text>
+    <text x="640" y="290" fill="#A3A89C">are never counted</text>
+
+    <rect x="900" y="150" width="240" height="190" rx="20" fill="#B9F464"/>
+    <circle cx="936" cy="186" r="18" fill="#10120F"/><text x="936" y="192" text-anchor="middle" font-weight="800" fill="#B9F464" font-size="16">4</text>
+    <text x="920" y="240" fill="#10120F" font-weight="800" font-size="19">You see it</text>
+    <text x="920" y="268" fill="#2C3A12">dashboard, widgets and</text>
+    <text x="920" y="290" fill="#2C3A12">gentle 50/75/100% nudges</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#B9F464" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M306 245 H334 M326 237 L334 245 L326 253"/>
+    <path d="M586 245 H614 M606 237 L614 245 L606 253"/>
+    <path d="M866 245 H894 M886 237 L894 245 L886 253"/>
+  </g>
+
+  <!-- privacy band -->
+  <rect x="60" y="370" width="1080" height="62" rx="16" fill="#171A15" stroke="#2A2F26"/>
+  <text x="88" y="408" fill="#FFFFFF" font-size="16"><tspan fill="#B9F464" font-weight="800">Private by design · </tspan>No account · No ads · Never reads captions, comments or messages · Data stays on the phone and is deleted after 30 days</text>
+</svg>

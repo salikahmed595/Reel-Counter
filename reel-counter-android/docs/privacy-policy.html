@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAICONS Self-Development Privacy Policy</title>
+<style>
+  :root { --bg:#F9FAF6; --paper:#FFFFFF; --ink:#23302B; --muted:#52635A; --line:#E6EAE5; --mint:#E3F0E5; --accent:#2F6A4C; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#121915; --paper:#1B231F; --ink:#E8F0EA; --muted:#ADBBB3; --line:#2A3430; --mint:#1F3328; --accent:#9CDCB4; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Nastaliq Urdu","Noto Naskh Arabic",sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 30px; letter-spacing:-.02em; margin: 0 0 4px; }
+  h2 { font-size: 19px; margin: 32px 0 8px; }
+  p, li { color: var(--ink); }
+  .muted { color: var(--muted); }
+  .card { background: var(--paper); border:1px solid var(--line); border-radius: 18px; padding: 16px 18px; margin: 16px 0; }
+  .summary { background: var(--mint); border:0; }
+  table { width:100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align:start; padding: 8px 6px; border-bottom:1px solid var(--line); vertical-align: top; }
+  a { color: var(--accent); }
+  nav a { margin-inline-end: 12px; }
+  [dir=rtl] { font-size: 17px; line-height: 2; }
+  @media (max-width: 520px) { table, thead, tbody, tr, th, td { display:block; } thead { display:none; } td { border:0; padding:2px 0; } tr { border-bottom:1px solid var(--line); padding:8px 0; } }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#en">English</a><a href="#ur">اردو</a></nav>
+
+<section id="en">
+<h1>PAICONS Self-Development Privacy Policy</h1>
+<p class="muted">Effective date: [EFFECTIVE DATE] · Developer: PAICONS (paicons.com) · Contact: <a href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a></p>
+
+<div class="card summary">
+<strong>In short:</strong> PAICONS Self-Development counts how often you move to a new short video in Instagram Reels, YouTube Shorts, Facebook Reels and TikTok. It does this <strong>on your phone only</strong>. Your activity is never uploaded, sold or shared, and it is deleted automatically after 30 days. The only thing that leaves your phone is Pro subscription verification, and only if you buy Pro.
+</div>
+
+<h2>1. Accessibility service</h2>
+<p>Automatic counting uses Android's AccessibilityService API. It runs only after you agree to the in-app disclosure and turn the service on in Android settings. While it is on:</p>
+<ul>
+<li>Android delivers events to it only from Instagram, YouTube, Facebook and TikTok. Events from all other apps are ignored.</li>
+<li>Android may make on-screen interface information from those apps available to the service, which can include text. PAICONS Self-Development uses <strong>only the position, size and scroll movement of scrolling areas</strong> to detect a move to a new video. All other information is discarded immediately and never stored.</li>
+<li>PAICONS Self-Development never reads or stores captions, comments, messages, creator names, video IDs, links, screenshots or recordings. It never taps, scrolls, blocks apps or changes settings.</li>
+<li>You can turn the service off at any time in Android settings, or withdraw consent in <em>Settings → Privacy &amp; permissions</em>.</li>
+</ul>
+
+<h2>2. Information stored on your device</h2>
+<table>
+<thead><tr><th>Data</th><th>Purpose</th><th>Retention</th></tr></thead>
+<tbody>
+<tr><td>Detected transitions (platform name, time, a random local ID)</td><td>Counts, goals, charts, widgets</td><td>Deleted automatically after a rolling 30 days</td></tr>
+<tr><td>Feed sessions (platform, start and end time)</td><td>Observed feed time</td><td>30 days</td></tr>
+<tr><td>Estimates (platform, time range, estimated value)</td><td>Clearly labelled estimates</td><td>30 days</td></tr>
+<tr><td>Tracking coverage periods</td><td>Showing gaps honestly instead of zero</td><td>30 days</td></tr>
+<tr><td>Settings (goals, reminders, language, widget choices, consent date)</td><td>Remembering your preferences</td><td>Until you reset the app or uninstall</td></tr>
+<tr><td>Cached Pro status</td><td>Keeping Pro available while offline for a limited time</td><td>Until it expires</td></tr>
+</tbody>
+</table>
+<p>This data is excluded from Android cloud backups and device-to-device transfer. <em>Delete all local activity</em> in the app removes it immediately. Uninstalling the app removes everything.</p>
+
+<h2>3. Optional permissions</h2>
+<ul>
+<li><strong>Usage access (optional):</strong> shows total time spent in the four supported apps, read from Android's usage statistics on your device. It is not uploaded.</li>
+<li><strong>Notifications (optional):</strong> sends goal reminders, generated locally.</li>
+<li><strong>Display over other apps (optional):</strong> shows the floating reminder bubble.</li>
+</ul>
+
+<h2>4. Pro subscriptions</h2>
+<p>Purchases are processed by Google Play. PAICONS Self-Development never receives your payment details. When you buy or restore Pro, the app sends the Google Play <strong>purchase token, product ID and app package name</strong> over HTTPS to our verification server. The server checks the purchase with Google Play's Developer API.</p>
+<ul>
+<li>The server stores only a one-way hash of the purchase token, plus the product, subscription status and expiry date. These are used to unlock Pro and to handle renewals, cancellations and refunds.</li>
+<li>The server hosting provider (Google Cloud) may record your IP address in standard request logs for security and operations. These logs are retained for a limited period under the provider's default settings.</li>
+<li>No PAICONS Self-Development activity is ever sent to the server.</li>
+</ul>
+<p>Google Play and the Google Play Billing library process purchase data under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+<h2>5. What we don't do</h2>
+<ul>
+<li>The paicons.com download (APK) contains no billing or network features other than links you choose to open.</li>
+<li>No accounts, sign-in, advertising, advertising IDs or analytics SDKs.</li>
+<li>We do not sell or share your data.</li>
+<li>Your data is not used for advertising or profiling.</li>
+</ul>
+
+<h2>6. Children</h2>
+<p>PAICONS Self-Development is not directed to children under 13 and does not knowingly collect their personal information.</p>
+
+<h2>7. Your choices and rights</h2>
+<p>You can stop tracking, delete all activity, withdraw consent or uninstall at any time. Because activity data never leaves your device, we cannot access or recover it. For questions about subscription records on our server, contact <a href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a>.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes, we will update the effective date above. If the change is material, we will also update the in-app disclosure.</p>
+
+<h2>9. Not affiliated</h2>
+<p class="muted">PAICONS Self-Development is independent. It is not affiliated with, endorsed by or sponsored by Meta, Instagram, Facebook, Google, YouTube or TikTok.</p>
+</section>
+
+<hr style="border:0;border-top:1px solid var(--line);margin:48px 0">
+
+<section id="ur" dir="rtl" lang="ur">
+<h1>PAICONS Self-Development — رازداری کی پالیسی</h1>
+<p class="muted">مؤثر تاریخ: [EFFECTIVE DATE] · ڈویلپر: PAICONS (paicons.com) · رابطہ: <a href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a></p>
+
+<div class="card summary">
+<strong>خلاصہ:</strong> PAICONS Self-Development گنتا ہے کہ آپ انسٹاگرام ریلز، یوٹیوب شارٹس، فیس بک ریلز اور ٹک ٹاک میں کتنی بار نئی مختصر ویڈیو پر جاتے ہیں۔ یہ سب <strong>صرف آپ کے فون پر</strong> ہوتا ہے۔ آپ کی سرگرمی کبھی اپ لوڈ، فروخت یا شیئر نہیں ہوتی، اور 30 دن بعد خودبخود حذف ہو جاتی ہے۔ فون سے باہر صرف پرو سبسکرپشن کی تصدیق جاتی ہے، اور وہ بھی صرف اگر آپ پرو خریدیں۔
+</div>
+
+<h2>1. ایکسیسبلٹی سروس</h2>
+<p>خودکار گنتی اینڈرائیڈ کی AccessibilityService استعمال کرتی ہے۔ یہ صرف تب چلتی ہے جب آپ ایپ میں انکشاف سے متفق ہوں اور اینڈرائیڈ ترتیبات میں سروس آن کریں۔ آن ہونے کے دوران:</p>
+<ul>
+<li>اینڈرائیڈ اسے صرف انسٹاگرام، یوٹیوب، فیس بک اور ٹک ٹاک کے ایونٹس دیتا ہے۔ باقی تمام ایپس نظرانداز ہوتی ہیں۔</li>
+<li>اینڈرائیڈ ان ایپس کی اسکرین کی معلومات، جن میں متن بھی شامل ہو سکتا ہے، سروس کو دستیاب کر سکتا ہے۔ PAICONS Self-Development نئی ویڈیو پہچاننے کے لیے <strong>صرف اسکرول ہونے والے حصوں کا مقام، سائز اور حرکت</strong> استعمال کرتا ہے۔ باقی سب فوراً رد کر دیا جاتا ہے اور کبھی محفوظ نہیں ہوتا۔</li>
+<li>کیپشن، تبصرے، پیغامات، تخلیق کاروں کے نام، ویڈیو آئی ڈی، لنکس، اسکرین شاٹس یا ریکارڈنگ کبھی نہیں پڑھے یا محفوظ کیے جاتے۔ سروس کبھی ٹیپ، اسکرول، ایپس بلاک یا ترتیبات تبدیل نہیں کرتی۔</li>
+<li>آپ کسی بھی وقت اینڈرائیڈ ترتیبات میں سروس بند کر سکتے ہیں، یا ایپ کی <em>ترتیبات ← رازداری اور اجازتیں</em> میں رضامندی واپس لے سکتے ہیں۔</li>
+</ul>
+
+<h2>2. آپ کے آلے پر محفوظ معلومات</h2>
+<p>شناخت شدہ منتقلیاں (پلیٹ فارم، وقت، مقامی بے ترتیب آئی ڈی)، فیڈ سیشن، تخمینے اور ٹریکنگ کے اوقات 30 دن بعد خودبخود حذف ہو جاتے ہیں۔ ترتیبات (اہداف، یاد دہانیاں، زبان، وجٹ کے انتخاب، رضامندی کی تاریخ) ایپ ری سیٹ یا ان انسٹال ہونے تک رہتی ہیں۔ یہ ڈیٹا کلاؤڈ بیک اپ اور ایک آلے سے دوسرے آلے میں منتقلی سے خارج ہے۔ ایپ میں <em>تمام مقامی سرگرمی حذف کریں</em> اسے فوراً مٹا دیتا ہے۔</p>
+
+<h2>3. اختیاری اجازتیں</h2>
+<p><strong>یوزیج ایکسیس:</strong> چار ایپس میں کُل وقت دکھانے کے لیے، صرف آلے پر۔ <strong>نوٹیفیکیشن:</strong> مقامی یاد دہانیوں کے لیے۔ <strong>دیگر ایپس کے اوپر دکھانا:</strong> تیرتی یاد دہانی کے لیے۔</p>
+
+<h2>4. پرو سبسکرپشن</h2>
+<p>ادائیگی گوگل پلے سنبھالتا ہے، اور ہمیں آپ کی ادائیگی کی تفصیلات کبھی نہیں ملتیں۔ خریداری یا بحالی پر ایپ گوگل پلے کا <strong>پرچیز ٹوکن، پروڈکٹ آئی ڈی اور پیکیج نام</strong> HTTPS کے ذریعے ہمارے تصدیقی سرور کو بھیجتی ہے۔ سرور صرف ٹوکن کا یک طرفہ ہیش، پروڈکٹ، حالت اور میعاد محفوظ کرتا ہے۔ ہوسٹنگ فراہم کنندہ (گوگل کلاؤڈ) حفاظتی لاگز میں محدود مدت کے لیے آپ کا IP ایڈریس ریکارڈ کر سکتا ہے۔ PAICONS Self-Development کی کوئی سرگرمی کبھی سرور کو نہیں بھیجی جاتی۔</p>
+
+<h2>5. ہم کیا نہیں کرتے</h2>
+<p>کوئی اکاؤنٹ، اشتہار، اشتہاری آئی ڈی یا اینالیٹکس SDK نہیں۔ ہم آپ کا ڈیٹا فروخت یا شیئر نہیں کرتے، اور اسے اشتہار یا پروفائلنگ کے لیے استعمال نہیں کرتے۔</p>
+
+<h2>6. بچے</h2>
+<p>PAICONS Self-Development 13 سال سے کم عمر بچوں کے لیے نہیں ہے۔</p>
+
+<h2>7. رابطہ اور تبدیلیاں</h2>
+<p>سوالات کے لیے <a href="mailto:[SUPPORT EMAIL]">[SUPPORT EMAIL]</a> پر رابطہ کریں۔ پالیسی میں تبدیلی پر اوپر دی گئی تاریخ اپ ڈیٹ ہوگی۔</p>
+<p class="muted">PAICONS Self-Development ایک آزاد ایپ ہے۔ اس کا میٹا، انسٹاگرام، فیس بک، گوگل، یوٹیوب یا ٹک ٹاک سے کوئی تعلق نہیں۔</p>
+</section>
+</main>
+</body>
+</html>
