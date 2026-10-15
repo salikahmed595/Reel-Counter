@@ -10,12 +10,19 @@ This guide walks you through installing the app, setting it up in about a minute
 
 ## 1. Install
 
-1. On your Android phone, download **[PAICONS-Self-Development-v1.1.0.apk](https://github.com/salikahmed595/Reel-Counter/raw/main/distribution/PAICONS-Self-Development-v1.1.0.apk)**. It's also available from paicons.com.
-2. Open the downloaded file from your notifications or the **Downloads** app.
-3. If Android says *"For your security, your phone is not allowed to install unknown apps from this source"*, tap **Settings**, turn on **Allow from this source**, and go back.
-4. Tap **Install**, then **Open**.
+**Install from Google Play.** It's the safe, one-tap way, and it's where the public version will be available. Testers receive a Google Play testing link from PAICONS. Open it on your phone, tap **Become a tester** (or **Accept**), then **Install**.
 
 > Needs **Android 10 or later**. The app is about 5 MB. No account or sign-in is needed.
+
+### "App blocked to protect your device"?
+
+You'll see this from **Google Play Protect** if you open the `.apk` file from a browser, WhatsApp or a file manager. Google blocks any app that uses the **Accessibility service** when it's installed from outside an app store, because scam apps misuse that permission.
+
+PAICONS uses Accessibility only to notice when you swipe to a new video. Even so, the block applies to every app with this permission.
+
+**What to do:** install from **Google Play** instead. Please don't switch off Play Protect.
+
+**Testers with a computer** can install over USB instead. See *For testers and developers: install over USB* in the [README](../README.md#install).
 
 ## 2. First-time setup
 
@@ -153,6 +160,9 @@ Only on your phone. It isn't uploaded or backed up to the cloud, and it's delete
 
 **Does it use a lot of battery?**
 It's designed to be light. It reacts only to scrolling inside the four supported apps, does a small status check every 30 seconds, and records nothing but counts.
+
+**Why does Play Protect block the APK file?**
+Google blocks *any* app that uses the Accessibility service when it's installed from a website, chat app or file manager. This protects people from scam apps. The fix is to install from Google Play. See [Install](#1-install).
 
 **Is it free?**
 Yes. Every feature in the downloadable version is free. Optional Pro extras will be offered only through the Google Play version.

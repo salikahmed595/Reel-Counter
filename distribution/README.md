@@ -1,48 +1,66 @@
-# PAICONS Self-Development: website download
+# PAICONS Self-Development: distribution
 
-| File | What it is |
+## Why Google Play is the way to share this app
+
+Google Play Protect's **enhanced fraud protection** blocks any app that requests the **Accessibility service** when the app is installed from a browser, a chat app such as WhatsApp, or a file manager. The user sees:
+
+> *"App blocked to protect your device — This app can request access to sensitive data…"*
+
+This app needs Accessibility to count swipes, so **a downloaded APK will be blocked on many phones**. This is a Google security policy, not a bug. It must not be bypassed: no renamed packages, split installs, or telling users to turn off Play Protect. **Apps installed from Google Play are not blocked**, because Google reviews them first.
+
+| File | Use |
 |---|---|
-| `PAICONS-Self-Development-v1.1.0.apk` | Signed release APK for paicons.com (Android 10+) |
-| `PAICONS-Self-Development-v1.1.0.apk.sha256` | Checksum, which is also shown on the download section |
-| `paicons-self-development-icon-512.png` | App icon used by the download section |
-| `paicons-download-section.html` | Download section you can paste into paicons.com |
+| `google-play/PAICONS-Self-Development-v1.1.0-play.aab` | **Upload this to Play Console.** It's kept out of git (`*.aab`). |
+| `PAICONS-Self-Development-v1.1.0.apk` | Website build, for **testers and developers via USB (`adb install`) only** |
+| `PAICONS-Self-Development-v1.1.0.apk.sha256` | Checksum of the APK |
+| `paicons-download-section.html` | paicons.com section, with a "Get it on Google Play" button |
+| `paicons-self-development-icon-512.png` | Icon used by the section, and the Play Store hi-res icon |
 
-## Publish it on paicons.com
+## Fastest way to get it onto phones: Play internal testing (about one day)
 
-1. Upload the APK and the icon PNG next to the page.
-2. Paste `paicons-download-section.html` into the page.
-3. Serve the APK with the MIME type `application/vnd.android.package-archive`. Most hosts do this automatically.
+1. Create a **Google Play Console** developer account at <https://play.google.com/console> (one-time US$25 fee, plus identity verification).
+2. **Create app** → name it *PAICONS Self-Development*, choose **App** and **Free**.
+3. Go to **Testing → Internal testing → Create new release**. Keep **Play App Signing** on and upload `google-play/PAICONS-Self-Development-v1.1.0-play.aab`.
+4. Under **Testers**, add up to 100 Gmail addresses, or create an email list. Save, then roll out the release.
+5. Copy the **opt-in link** and send it to your testers. Each tester opens it on their phone → **Become a tester** → **Install from Google Play**. No Play Protect block.
+6. Play Console will ask for the app content forms (privacy policy, Data safety, **Accessibility API declaration and video**, content rating and target audience). The answers are written out in [`../reel-counter-android/docs/PLAY_RELEASE.md`](../reel-counter-android/docs/PLAY_RELEASE.md).
 
-## Install it on your own phone
+Then **closed testing**, with at least 12 testers for 14 days on a new personal account, followed by **production**. When the public listing is live, put its link in `paicons-download-section.html` and the README.
 
-You can copy the APK to the phone and open it.
+## Install on your own phone right now (USB, no Play Store)
 
-Or, with USB debugging turned on, run this from this folder:
+`adb` installs aren't internet sideloading, so Play Protect doesn't block them.
+
+1. On the phone, go to Settings → About phone and tap **Build number** 7 times. Then go to **Developer options** and turn on **USB debugging**.
+2. Connect the phone to this PC by USB and accept **Allow USB debugging**.
+3. From this folder, run:
 
 ```bash
-adb install PAICONS-Self-Development-v1.1.0.apk
+"%LOCALAPPDATA%\Android\Sdk\platform-tools\adb.exe" install PAICONS-Self-Development-v1.1.0.apk
 ```
 
-Then open the app, tap **Agree**, and turn on **PAICONS Self-Development tracking** in Accessibility settings.
+If an older copy installed from WhatsApp is on the phone, uninstall it first.
 
-If Android 13 or later says **"Restricted setting"**, go to App info → ⋮ → **Allow restricted settings**, then turn the tracking on again. The app shows this step itself when it's needed.
+## Coming in 2027: Android developer verification
 
-## ⚠ Signing key: back it up now
+Google is phasing in **developer verification** for all installs on certified Android phones. It already applies in Brazil, Indonesia, Singapore and Thailand, and is planned worldwide in 2027. A verified Play Console account covers this. Keep the same package name (`com.paicons.selfdevelopment`) and signing key.
 
-The APK is signed with `C:\Users\salik\.paicons\paicons-release.jks`. Its password is in `C:\Users\salik\.paicons\keystore.properties`.
+## ⚠ Signing key: back it up
 
-- **Every future version must be signed with this same key.** If the key is lost, people who installed from your site can't update. They would have to uninstall, which deletes their data.
-- Back up both files to a password manager or other offline storage. Don't keep the only copy on this PC, and don't put them in OneDrive or git.
-- Use this same key as your Google Play **upload key**. Google re-signs Play installs with its own key, so a website install and a Play install of the same app are signed differently. Someone switching from the website version to the Play version has to uninstall first.
+`C:\Users\salik\.paicons\paicons-release.jks` together with `keystore.properties` is the **upload key** for Play and the signing key for testers' APKs.
+
+- Back up both files offline, for example in a password manager.
+- Never commit them to git.
+- If you lose the upload key, Play Console can reset it, but only if Play App Signing is on.
 
 ## Release a new version
 
-1. In `reel-counter-android/gradle.properties`, raise `reelcounter.versionCode` (for example to 2) and `reelcounter.versionName` (for example to 1.0.1).
-2. Run `./gradlew assembleWebsiteRelease` from `reel-counter-android/`.
-3. Copy `%LOCALAPPDATA%\ReelCounterBuild\app\outputs\apk\website\release\app-website-release.apk` here as `PAICONS-Self-Development-vX.Y.Z.apk`.
-4. Run `sha256sum` on the new APK, then update the version, size, date and checksum in the download section.
+1. In `reel-counter-android/gradle.properties`, raise `reelcounter.versionCode` and `reelcounter.versionName`.
+2. From `reel-counter-android/`, run:
 
-## About this build
+```bash
+./gradlew bundlePlayRelease assembleWebsiteRelease
+```
 
-- **No Pro purchases.** Google Play Billing can't sell to apps installed from a website, so subscriptions appear only in the Google Play version. Every core feature is free here.
-- **Same privacy behaviour as the Play version.** Everything is processed on the device, there are no ads and no analytics.
+3. Upload the AAB from `%LOCALAPPDATA%\ReelCounterBuild\app\outputs\bundle\playRelease\` to Play Console.
+4. Copy the tester APK from `...\apk\website\release\` into this folder and update its checksum.

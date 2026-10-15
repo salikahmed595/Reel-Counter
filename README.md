@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/salikahmed595/Reel-Counter/raw/main/distribution/PAICONS-Self-Development-v1.1.0.apk"><b>⬇ Download for Android (APK, v1.1.0, 5.4 MB)</b></a>
+  <b>📲 Coming soon to Google Play</b> &nbsp;·&nbsp; <a href="#install"><b>How to install</b></a>
   &nbsp;·&nbsp;
   <a href="docs/USER_GUIDE.md"><b>📖 User guide</b></a>
   &nbsp;·&nbsp;
@@ -67,14 +67,33 @@ After setup, a **Get started** checklist on the Home screen shows your next step
 
 ## Install
 
-1. **[Download the APK](https://github.com/salikahmed595/Reel-Counter/raw/main/distribution/PAICONS-Self-Development-v1.1.0.apk)** on your Android phone (Android 10 or later).
-2. Open the downloaded file. If asked, allow your browser to **install unknown apps**.
-3. Open **PAICONS Self-Development** and follow the on-screen guide.
+### Recommended: Google Play
 
-> **Android 13 or later — "Restricted setting"?** Because the app comes from a website rather than Google Play, Android asks you to approve it once. Go to **App info → ⋮ (top right) → Allow restricted settings**, then turn tracking on again. The app shows a shortcut for this.
+PAICONS Self-Development is being published on **Google Play**, which is the safe, one-tap way to install it. The link will appear here as soon as the listing is live. Beta testers will receive a Google Play testing link from PAICONS.
 
-**Verify your download (optional):** the SHA-256 of `PAICONS-Self-Development-v1.1.0.apk` is
-`9bf45bcfbe1dd9fb38e7fb0bc7d5108ad67ec1cbb70dcd4e466f2b47ad85564d`
+### Why the APK file is blocked on some phones
+
+If you download the `.apk` file and open it from a browser, WhatsApp or a file manager, some phones show **"App blocked to protect your device"** from Google Play Protect.
+
+This happens because the app uses Android's **Accessibility service**, which is how it notices when you swipe to a new video. Google blocks *every* app that asks for this permission when it's installed from outside an app store, to stop scam apps that misuse it. Installing from Google Play avoids the block, because Google has already reviewed the app there.
+
+> Please **don't turn off Play Protect** to get around this. It protects your phone from harmful apps. Use the Google Play version instead.
+
+### For testers and developers: install over USB
+
+Installing from a computer over USB with `adb` is a normal developer method, and Play Protect doesn't treat it as an internet download.
+
+1. On the phone, enable **Developer options** (Settings → About phone → tap **Build number** 7 times). Then turn on **USB debugging**.
+2. Install [Android platform-tools](https://developer.android.com/tools/releases/platform-tools) on your computer and connect the phone by USB. Accept the "Allow USB debugging?" prompt on the phone.
+3. Download [`PAICONS-Self-Development-v1.1.0.apk`](https://github.com/salikahmed595/Reel-Counter/raw/main/distribution/PAICONS-Self-Development-v1.1.0.apk) to the computer, then run:
+
+   ```bash
+   adb install PAICONS-Self-Development-v1.1.0.apk
+   ```
+
+4. Open **PAICONS Self-Development** on the phone and follow the on-screen guide.
+
+The SHA-256 of the APK is `9bf45bcfbe1dd9fb38e7fb0bc7d5108ad67ec1cbb70dcd4e466f2b47ad85564d`.
 
 For step-by-step help with pictures, troubleshooting and FAQs, see the **[User guide](docs/USER_GUIDE.md)**.
 
@@ -99,7 +118,7 @@ Full policy: [docs/privacy-policy.html](reel-counter-android/docs/privacy-policy
 |---|---|
 | [`reel-counter-android/`](reel-counter-android) | Android app (Kotlin, Jetpack Compose, Room, Glance widgets). Product flavors: `website` (APK) and `play` (Google Play with billing). |
 | [`reel-counter-billing-backend/`](reel-counter-billing-backend) | Google Play subscription verification service (Node and TypeScript on Cloud Run, Firestore, Pub/Sub RTDN). |
-| [`distribution/`](distribution) | Signed website APK, checksum, and a download section ready to paste into paicons.com. |
+| [`distribution/`](distribution) | Tester APK (adb), Google Play upload guide, and a paicons.com section with a "Get it on Google Play" button. |
 | [`branding/`](branding) | Logo and icon sources (SVG) and PNG exports. |
 | [`docs/`](docs) | User guide and README images. |
 | `Reel_Counter_Production_PRD_Blueprint.md`, `reel_counter_ui/` | Product requirements and the original UI prototype. |
@@ -109,7 +128,7 @@ Build with Android Studio 2026.2+ or from a terminal:
 ```bash
 cd reel-counter-android
 ./gradlew testWebsiteDebugUnitTest     # unit tests
-./gradlew assembleWebsiteRelease       # signed APK for the website (needs your keystore)
+./gradlew assembleWebsiteRelease       # signed tester APK (install via adb; needs your keystore)
 ./gradlew bundlePlayRelease            # AAB for Google Play
 ```
 

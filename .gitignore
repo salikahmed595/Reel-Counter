@@ -19,3 +19,6 @@ reel-counter-billing-backend/dist/
 .env
 **/service-account*.json
 *.json.key
+
+# Google Play upload bundles (uploaded to Play Console, not published here)
+*.aab

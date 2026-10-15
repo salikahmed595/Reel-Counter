@@ -4,6 +4,8 @@ This is the step-by-step path from this repo to a live Play listing. Items marke
 
 > **Approval is not guaranteed.** Google reviews every app that uses the AccessibilityService API by hand. This app follows the published rules: in-app prominent disclosure, affirmative consent, declaration and video, no autonomous actions, and `isAccessibilityTool=false`. Reviewers can still reject it. If that happens, read the rejection email carefully, fix exactly what it names, and resubmit. Don't argue the policy.
 
+> **Why Play, not a website APK:** Google Play Protect's enhanced fraud protection blocks every app that requests the Accessibility service when it's installed from a browser, chat app or file manager (*"App blocked to protect your device"*). Google Play installs aren't affected. Ship to users through Play. Start with **internal testing** for the quickest working install link (see [`distribution/README.md`](../../distribution/README.md)).
+
 ---
 
 ## 0. Decisions to make first (they can't change after the first upload)

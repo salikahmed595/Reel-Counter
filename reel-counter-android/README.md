@@ -25,7 +25,7 @@ Open this folder in Android Studio, or from a terminal:
 ```bash
 ./gradlew assembleDebug        # debug APK
 ./gradlew testDebugUnitTest    # 30 unit tests (engine, analytics, goals, estimates)
-./gradlew assembleWebsiteRelease  # signed APK for paicons.com
+./gradlew assembleWebsiteRelease  # signed APK for testers (install via adb; public users install from Google Play)
 ```
 
 When the project sits inside a OneDrive folder, build outputs go to `%LOCALAPPDATA%\ReelCounterBuild\` (OneDrive sync locks files mid-build). See `build.gradle.kts`.

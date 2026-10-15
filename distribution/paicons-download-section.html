@@ -1,10 +1,13 @@
 <!--
   PAICONS Self-Development — download section for paicons.com
   Paste this block into your page. It's self-contained (scoped CSS + no scripts).
-  Upload these files next to the page, or change the href/src paths:
-    - PAICONS-Self-Development-v1.1.0.apk
-    - paicons-self-development-icon-512.png
-  On each new release, update the version, size, date and SHA-256 below.
+  Upload paicons-self-development-icon-512.png next to the page.
+
+  The button points to the Google Play listing. Installing from Google Play avoids Play Protect's
+  "App blocked to protect your device", which blocks every app using the Accessibility service when
+  it is installed from a website, chat app or file manager. Don't link the APK for the public.
+  Until the listing is public, set PLAY_URL to your internal or closed-testing opt-in link
+  (Play Console → Testing → copy link), or leave the "coming soon" state.
 -->
 <section class="pcsd" id="self-development-app">
   <style>
@@ -43,10 +46,10 @@
       <h2>Scroll less.<br><span>Grow more.</span></h2>
       <p>A private, on-device counter for Instagram Reels, YouTube Shorts, Facebook Reels and TikTok. See your habits, set gentle daily limits and add beautiful home-screen widgets, in English and اردو.</p>
       <div class="btns">
-        <a class="btn" href="PAICONS-Self-Development-v1.1.0.apk" download>Download for Android ↗</a>
+        <!-- PLAY_URL --><a class="btn" href="https://play.google.com/store/apps/details?id=com.paicons.selfdevelopment" rel="noopener">Get it on Google Play ↗</a>
         <a class="link" href="#pcsd-install">How to install ↗</a>
       </div>
-      <div class="meta">Version 1.1.0 · Android 10 or later · 5.3 MB · Free · No account, no ads</div>
+      <div class="meta">Coming soon to Google Play · Android 10 or later · Free · No account, no ads</div>
     </div>
     <div class="card">
       <div class="app">
@@ -62,13 +65,13 @@
       <details id="pcsd-install">
         <summary>Install steps</summary>
         <ol>
-          <li>Tap <b>Download for Android</b> and open the downloaded file.</li>
-          <li>If asked, allow your browser to <b>install unknown apps</b>.</li>
-          <li>Open the app, read the privacy screen and tap <b>Agree</b>.</li>
-          <li>Turn on <b>PAICONS Self-Development tracking</b> in Accessibility settings.</li>
-          <li>Android 13+: if you see <b>“Restricted setting”</b>, open App info → <b>⋮</b> → <b>Allow restricted settings</b>, then turn it on again.</li>
+          <li>Tap <b>Get it on Google Play</b>. Testers: open the testing link you received and tap <b>Become a tester</b>.</li>
+          <li>Tap <b>Install</b>, then <b>Open</b>.</li>
+          <li>Read the privacy screen and tap <b>Agree</b>.</li>
+          <li>Follow the numbered steps to turn on <b>PAICONS Self-Development tracking</b>.</li>
+          <li>Pick a daily limit. You're done. The app shows a short checklist for anything left.</li>
         </ol>
-        <p class="meta">SHA-256: <code>9bf45bcfbe1dd9fb38e7fb0bc7d5108ad67ec1cbb70dcd4e466f2b47ad85564d</code></p>
+        <p class="meta">Why Google Play? Android blocks apps that use the Accessibility service when they're installed from a website or chat app. Google Play installs are reviewed and safe.</p>
       </details>
     </div>
   </div>
